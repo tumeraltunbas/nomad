@@ -5,7 +5,7 @@ var SupportedCommands = struct {
 	Pull string
 }{
 	Base: "nomad",
-	Pull: "nomad pull",
+	Pull: "pull",
 }
 
 var SupportedTools = []string{"claude-code"}
