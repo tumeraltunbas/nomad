@@ -9,7 +9,8 @@ import (
 )
 
 var pullCmd = &cobra.Command{
-	Use: internal.SupportedCommands.Pull,
+	Use:   internal.SupportedCommands.Pull.Command,
+	Short: internal.SupportedCommands.Pull.ShortInfo,
 	PreRunE: func(cmd *cobra.Command, args []string) error {
 		tool, _ := cmd.Flags().GetString(internal.ToolFlag.Long)
 		storage, _ := cmd.Flags().GetString(internal.StorageFlag.Long)

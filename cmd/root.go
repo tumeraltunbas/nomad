@@ -9,8 +9,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   internal.SupportedCommands.Base,
-	Short: "Nomad is a CLI tool that keeps your AI development environment consistent across every machine you work on.",
+	Use:   internal.SupportedCommands.Base.Command,
+	Short: internal.SupportedCommands.Base.ShortInfo,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Welcome to Nomad! Type 'nomad --help' to see what it can do.")
 	},

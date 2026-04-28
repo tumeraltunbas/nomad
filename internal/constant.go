@@ -1,11 +1,24 @@
 package internal
 
-var SupportedCommands = struct {
-	Base string
-	Pull string
-}{
-	Base: "nomad",
-	Pull: "pull",
+type CommandInfo struct {
+	Command   string
+	ShortInfo string
+}
+
+type SupportedCommandType struct {
+	Base CommandInfo
+	Pull CommandInfo
+}
+
+var SupportedCommands = SupportedCommandType{
+	Base: CommandInfo{
+		Command:   "nomad",
+		ShortInfo: "Nomad is a CLI tool that keeps your AI development environment consistent across every machine you work on.",
+	},
+	Pull: CommandInfo{
+		Command:   "pull",
+		ShortInfo: "Pull configuration from a storage provider",
+	},
 }
 
 var SupportedTools = []string{"claude-code"}
